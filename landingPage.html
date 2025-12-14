@@ -1,0 +1,1064 @@
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>ENYLO — Solutions technologiques pour Cornerstone OnDemand</title>
+	<meta
+		name="description"
+		content="ENYLO conçoit des solutions CSOD rapides, sur-mesure et intégrées : customisations UX, automatisations et modules métier autour de Cornerstone OnDemand."
+	/>
+	<meta name="robots" content="index,follow" />
+	<meta name="theme-color" content="#020617" />
+
+	<link rel="canonical" href="https://enylo.tech/" />
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="ENYLO" />
+	<meta property="og:title" content="ENYLO — Tech for Cornerstone OnDemand" />
+	<meta
+		property="og:description"
+		content="Solutions CSOD rapides, sur-mesure et parfaitement intégrées : customisations UX, automatisations et modules métier."
+	/>
+	<meta property="og:url" content="https://enylo.tech/" />
+	<meta property="og:image" content="https://placehold.co/1200x630" />
+	<meta
+		property="og:image:alt"
+		content="ENYLO — Tech for Cornerstone OnDemand"
+	/>
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta
+		name="twitter:title"
+		content="ENYLO — Solutions technologiques pour CSOD"
+	/>
+	<meta
+		name="twitter:description"
+		content="Customisations UX, automatisations et modules métier autour de Cornerstone OnDemand."
+	/>
+	<meta name="twitter:image" content="https://placehold.co/1200x630" />
+
+	<!-- Favicons (placeholders) -->
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="32x32"
+		href="https://placehold.co/32x32"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="16x16"
+		href="https://placehold.co/16x16"
+	/>
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="https://placehold.co/180x180"
+	/>
+
+	<!-- Preconnect for faster CDN handshakes -->
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+	<link rel="preconnect" href="https://unpkg.com" crossorigin />
+
+	<!-- Bootstrap 5 CSS -->
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+	/>
+
+	<!-- AOS CSS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	<style>
+		:root {
+			/* Dark Neo Tech palette (ENYLO) */
+			--oc-bg: #0f172a; /* main background */
+			--oc-bg-alt: #1e293b; /* cards / alt sections */
+			--oc-bg-soft: #020617; /* deepest background / soft sections */
+			--oc-text: #ffffff; /* primary text */
+			--oc-text-muted: #cbd5e1; /* secondary text */
+			--oc-border: #1f2937; /* borders on dark */
+			--oc-primary: #3b82f6; /* main accent blue */
+			--oc-primary-soft: rgba(59, 130, 246, 0.15); /* soft blue background */
+			--oc-cta-bg: #020617; /* CTA / special background */
+			--oc-success: #10b981; /* success / positive */
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: var(--oc-bg);
+			color: var(--oc-text);
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+				sans-serif;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		.site-header {
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			background-color: rgba(15, 23, 42, 0.96);
+			backdrop-filter: blur(12px);
+			border-bottom: 1px solid var(--oc-border);
+		}
+
+		.navbar {
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+
+		.navbar-brand {
+			font-weight: 600;
+			letter-spacing: 0.12em;
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--oc-text);
+		}
+
+		.navbar-brand span {
+			display: inline-block;
+			padding: 0.15rem 0.6rem;
+			border-radius: 999px;
+			background-color: var(--oc-primary-soft);
+			color: var(--oc-primary);
+			font-size: 0.7rem;
+			font-weight: 600;
+		}
+
+		.navbar-nav .nav-link {
+			font-size: 0.92rem;
+			color: var(--oc-text-muted);
+			padding-inline: 0.75rem;
+		}
+
+		.navbar-nav .nav-link:hover {
+			color: var(--oc-text);
+		}
+
+		.nav-link.nav-cta {
+			padding: 0.45rem 1.1rem;
+			border-radius: 999px;
+			border: 1px solid var(--oc-primary);
+			color: var(--oc-primary);
+			font-weight: 500;
+			margin-left: 0.25rem;
+			transition: background-color 0.15s ease, color 0.15s ease,
+				transform 0.12s ease;
+		}
+
+		.nav-link.nav-cta:hover {
+			background-color: var(--oc-primary);
+			color: #ffffff;
+			transform: translateY(-1px);
+		}
+
+		main {
+			padding-bottom: 3rem;
+		}
+
+		.hero {
+			padding: 4rem 0 3rem 0;
+		}
+
+		@media (min-width: 992px) {
+			.hero {
+				padding: 5rem 0 4.5rem 0;
+			}
+		}
+
+		.hero-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			border-radius: 999px;
+			padding: 0.3rem 0.9rem;
+			background: linear-gradient(
+				90deg,
+				var(--oc-primary-soft),
+				rgba(37, 99, 235, 0.18)
+			);
+			color: var(--oc-primary);
+			font-size: 0.78rem;
+			font-weight: 500;
+			margin-bottom: 1.1rem;
+		}
+
+		.hero-badge i {
+			width: 16px;
+			height: 16px;
+		}
+
+		.hero-title {
+			font-size: clamp(2.1rem, 3.3vw, 2.9rem);
+			font-weight: 700;
+			letter-spacing: -0.03em;
+			margin-bottom: 0.9rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.03rem;
+			color: var(--oc-text-muted);
+			max-width: 40rem;
+			margin-bottom: 1.75rem;
+		}
+
+		.hero-actions .btn-primary {
+			background-color: var(--oc-primary);
+			border-color: var(--oc-primary);
+			border-radius: 999px;
+			padding-inline: 1.5rem;
+			font-weight: 500;
+			font-size: 0.95rem;
+		}
+
+		.hero-actions .btn-primary:hover {
+			background-color: #1d4ed8;
+			border-color: #1d4ed8;
+		}
+
+		.hero-actions .btn-outline-secondary {
+			border-radius: 999px;
+			padding-inline: 1.3rem;
+			font-size: 0.92rem;
+			border-color: var(--oc-border);
+			color: var(--oc-text-muted);
+			background-color: var(--oc-bg-alt);
+		}
+
+		.hero-actions .btn-outline-secondary:hover {
+			border-color: var(--oc-primary);
+			color: var(--oc-primary);
+			background-color: rgba(15, 23, 42, 0.9);
+		}
+
+		.hero-card {
+			background: radial-gradient(circle at top left, #1e293b, #020617);
+			border-radius: 1.35rem;
+			border: 1px solid rgba(148, 163, 184, 0.4);
+			box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);
+			padding: 1.6rem 1.8rem;
+			max-width: 420px;
+			margin-left: auto;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.hero-card::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(
+				circle at top right,
+				rgba(59, 130, 246, 0.2),
+				transparent 55%
+			);
+			pointer-events: none;
+		}
+
+		.hero-card-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 1.2rem;
+			position: relative;
+			z-index: 1;
+		}
+
+		.hero-card-title {
+			font-size: 0.95rem;
+			font-weight: 600;
+			color: var(--oc-text-muted);
+		}
+
+		.hero-card-tag {
+			font-size: 0.75rem;
+			padding: 0.2rem 0.7rem;
+			border-radius: 999px;
+			background-color: rgba(15, 23, 42, 0.6);
+			color: var(--oc-text-muted);
+		}
+
+		.hero-card-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 0.75rem;
+			position: relative;
+			z-index: 1;
+		}
+
+		.hero-card-list li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 0.9rem;
+		}
+
+		.hero-card-label {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--oc-text);
+		}
+
+		.hero-card-label i {
+			width: 16px;
+			height: 16px;
+			color: var(--oc-primary);
+		}
+
+		.pill {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0.15rem 0.6rem;
+			border-radius: 999px;
+			font-size: 0.75rem;
+			background-color: rgba(15, 23, 42, 0.9);
+			color: var(--oc-text-muted);
+			white-space: nowrap;
+		}
+
+		.pill-success {
+			background-color: rgba(22, 163, 74, 0.1);
+			color: var(--oc-success);
+		}
+
+		.pill-soft {
+			background-color: rgba(250, 204, 21, 0.1);
+			color: #facc15;
+		}
+
+		.section {
+			padding: 3.5rem 0;
+		}
+
+		@media (min-width: 992px) {
+			.section {
+				padding: 4rem 0;
+			}
+		}
+
+		.section-alt {
+			background-color: var(--oc-bg-alt);
+		}
+
+		.section-soft {
+			background-color: var(--oc-bg-soft);
+		}
+
+		.section-cta {
+			background: radial-gradient(circle at top, #1e293b, #020617);
+			color: #ffffff;
+			padding: 3.5rem 0;
+			text-align: center;
+		}
+
+		.section-title {
+			font-size: 1.75rem;
+			font-weight: 600;
+			margin-bottom: 0.75rem;
+		}
+
+		.section-subtitle {
+			color: var(--oc-text-muted);
+			max-width: 40rem;
+			margin: 0 auto 2rem auto;
+			font-size: 0.96rem;
+		}
+
+		.section-narrow {
+			max-width: 720px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.section-narrow p {
+			color: var(--oc-text-muted);
+			font-size: 1rem;
+		}
+
+		.offer-card,
+		.case-card,
+		.benefit-card,
+		.about-card {
+			border-radius: 1rem;
+			border: 1px solid var(--oc-border);
+			background-color: var(--oc-bg-alt);
+			padding: 1.5rem;
+			height: 100%;
+			transition: transform 0.15s ease, box-shadow 0.15s ease,
+				border-color 0.15s ease;
+		}
+
+		.offer-card:hover,
+		.case-card:hover,
+		.benefit-card:hover,
+		.about-card:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 18px 35px rgba(0, 0, 0, 0.5);
+			border-color: rgba(148, 163, 184, 0.8);
+		}
+
+		.offer-card h3 {
+			font-size: 1.1rem;
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+		}
+
+		.offer-tag {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.75rem;
+			padding: 0.15rem 0.6rem;
+			border-radius: 999px;
+			background-color: var(--oc-primary-soft);
+			color: var(--oc-primary);
+			margin-bottom: 0.5rem;
+		}
+
+		.offer-card {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.offer-card .offer-link {
+			margin-top: auto;
+		}
+
+		.offer-card p {
+			font-size: 0.93rem;
+			color: var(--oc-text-muted);
+			margin-bottom: 0.75rem;
+		}
+
+		.offer-card ul {
+			padding-left: 1.1rem;
+			margin-bottom: 0.75rem;
+			font-size: 0.9rem;
+			color: var(--oc-text-muted);
+		}
+
+		.offer-link {
+			font-size: 0.9rem;
+			color: var(--oc-primary);
+			font-weight: 500;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.25rem;
+		}
+
+		.offer-link i {
+			width: 14px;
+			height: 14px;
+		}
+
+		.cases-grid img {
+			border-radius: 0.75rem;
+			margin-bottom: 0.75rem;
+		}
+
+		.case-card h3 {
+			font-size: 1.02rem;
+			font-weight: 600;
+			margin-bottom: 0.35rem;
+		}
+
+		.case-meta {
+			font-size: 0.8rem;
+			color: var(--oc-text-muted);
+			margin-bottom: 0.5rem;
+		}
+
+		.case-card p {
+			font-size: 0.9rem;
+			color: var(--oc-text-muted);
+			margin-bottom: 0;
+		}
+
+		.benefit-card {
+			text-align: left;
+		}
+
+		.benefit-icon {
+			width: 34px;
+			height: 34px;
+			border-radius: 999px;
+			background-color: rgba(15, 23, 42, 0.9);
+			border: 1px solid rgba(148, 163, 184, 0.5);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0.75rem;
+		}
+
+		.benefit-icon i {
+			width: 18px;
+			height: 18px;
+			color: var(--oc-primary);
+		}
+
+		.benefit-card h3 {
+			font-size: 1rem;
+			font-weight: 600;
+			margin-bottom: 0.35rem;
+		}
+
+		.benefit-card p {
+			font-size: 0.9rem;
+			color: var(--oc-text-muted);
+			margin: 0;
+		}
+
+		.about-card h2 {
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+		}
+
+		.about-card p {
+			font-size: 0.95rem;
+			color: var(--oc-text-muted);
+			margin-bottom: 0.75rem;
+		}
+
+		.about-card .offer-link {
+			margin-top: 0.25rem;
+		}
+
+		.contact-cta .btn {
+			border-radius: 999px;
+			padding-inline: 1.8rem;
+			font-weight: 500;
+		}
+
+		.contact-cta p {
+			color: #e5e7eb;
+			max-width: 30rem;
+			margin: 0.75rem auto 1.5rem auto;
+		}
+
+		footer {
+			padding: 1.5rem 0;
+			border-top: 1px solid var(--oc-border);
+			font-size: 0.85rem;
+			color: var(--oc-text-muted);
+			background-color: var(--oc-bg-alt);
+		}
+
+		footer a {
+			color: var(--oc-text-muted);
+		}
+
+		footer a:hover {
+			color: var(--oc-primary);
+		}
+	</style>
+	<!-- Structured data (Organization) -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "ENYLO",
+			"url": "https://enylo.tech/",
+			"logo": "https://placehold.co/512x512",
+			"sameAs": [],
+			"contactPoint": [
+				{
+					"@type": "ContactPoint",
+					"contactType": "sales",
+					"email": "contact@enylo.tech",
+					"availableLanguage": ["fr", "en"]
+				}
+			]
+		}
+	</script>
+</head>
+<body>
+	<!-- Header / Navbar -->
+	<header class="site-header">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<div class="container">
+				<a class="navbar-brand" href="/">
+					ENYLO
+					<span>Tech for Cornerstone</span>
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#mainNavbar"
+					aria-controls="mainNavbar"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-end"
+					id="mainNavbar"
+				>
+					<ul class="navbar-nav align-items-lg-center gap-lg-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#services">Offres</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#cases">Nos réalisations</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">À propos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-cta" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<!-- HERO -->
+		<section class="hero">
+			<div class="container">
+				<div class="row align-items-center g-4">
+					<div class="col-lg-7" data-aos="fade-right">
+						<div class="hero-badge">
+							<i data-lucide="badge-check"></i>
+							Solutions technologiques pour Cornerstone OnDemand
+						</div>
+						<h1 class="hero-title">
+							Solutions CSOD rapides, sur-mesure et parfaitement intégrées.
+						</h1>
+						<p class="hero-subtitle">
+							J’aide les organisations équipées de la plateforme Cornerstone
+							OnDemand à résoudre rapidement leurs besoins spécifiques en
+							développant des personnalisations UX, des optimisations et des
+							automatisations entièrement alignées sur leurs workflows.
+						</p>
+						<div class="hero-actions d-flex flex-wrap gap-2">
+							<a href="#contact" class="btn btn-primary">
+								Discutons de votre besoin
+							</a>
+							<a href="#services" class="btn btn-outline-secondary">
+								Voir les offres
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-5" data-aos="fade-left">
+						<div class="hero-card">
+							<div class="hero-card-header">
+								<span class="hero-card-title">Snapshot environnement CSOD</span>
+								<!-- <span class="hero-card-tag">Vue synthétique</span> -->
+							</div>
+							<ul class="hero-card-list">
+								<li>
+									<span class="hero-card-label">
+										<i data-lucide="zap"></i>
+										Quick Wins livrés
+									</span>
+									<span class="pill">En quelques semaines</span>
+								</li>
+								<li>
+									<span class="hero-card-label">
+										<i data-lucide="puzzle"></i>
+										Modules sur mesure
+									</span>
+									<span class="pill pill-success">Sur vos environnements</span>
+								</li>
+								<li>
+									<span class="hero-card-label">
+										<i data-lucide="workflow"></i>
+										Automatisations
+									</span>
+									<span class="pill">Workflows allégés</span>
+								</li>
+								<li>
+									<span class="hero-card-label">
+										<i data-lucide="users"></i>
+										Expérience utilisateur
+									</span>
+									<span class="pill pill-soft">Meilleure adoption</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Ce que je fais -->
+		<section class="section">
+			<div class="container section-narrow" data-aos="fade-up">
+				<h2 class="section-title">Ce que nous faisons chez ENYLO</h2>
+				<p>
+					Enylo aide les entreprises équipées de la plateforme Cornerstone
+					OnDemand à aller au-delà des capacités standard de la plateforme, en
+					développant des personnalisations UX, des optimisations et des
+					automatisations conçues pour leurs usages réels. Notre approche est
+					directe : comprendre précisément le problème, définir la réponse la
+					plus efficace et livrer une solution opérationnelle dans des délais
+					optimaux, sans complexité inutile.
+				</p>
+			</div>
+		</section>
+
+		<!-- Offres -->
+		<section class="section section-alt" id="services">
+			<div class="container" data-aos="fade-up">
+				<h2 class="section-title text-center">Nos offres</h2>
+				<p class="section-subtitle text-center">
+					4 niveaux d’intervention pour couvrir aussi bien les ajustements
+					rapides que les projets CSOD plus structurants.
+				</p>
+
+				<div class="row g-4">
+					<!-- Quick Wins -->
+					<div class="col-md-6 col-lg-3">
+						<div class="offer-card h-100">
+							<span class="offer-tag">Niveau 1</span>
+							<h3>Quick Wins</h3>
+							<p>
+								Des interventions ciblées pour enlever un irritant, simplifier
+								une étape ou débloquer un usage clé.
+							</p>
+							<ul>
+								<li>Scripts ciblés sur une page CSOD</li>
+								<li>Micro-améliorations UX</li>
+								<li>Aides contextuelles et messages</li>
+							</ul>
+							<a href="#contact" class="offer-link">
+								Besoin d’un Quick Win
+								<i data-lucide="arrow-right"></i>
+							</a>
+						</div>
+					</div>
+
+					<!-- Modules -->
+					<div class="col-md-6 col-lg-3">
+						<div class="offer-card h-100">
+							<span class="offer-tag">Niveau 2</span>
+							<h3>Modules sur mesure</h3>
+							<p>
+								Des fonctionnalités complètes, pensées pour vos processus
+								internes et accessibles directement depuis CSOD.
+							</p>
+							<ul>
+								<li>Outils dédiés aux managers</li>
+								<li>Vues et filtres personnalisés</li>
+								<li>Mini-dashboards et indicateurs</li>
+							</ul>
+							<a href="#contact" class="offer-link">
+								Besoin d’un module
+								<i data-lucide="arrow-right"></i>
+							</a>
+						</div>
+					</div>
+
+					<!-- Projets -->
+					<div class="col-md-6 col-lg-3">
+						<div class="offer-card h-100">
+							<span class="offer-tag">Niveau 3</span>
+							<h3>Projets complets</h3>
+							<p>
+								Des initiatives plus larges combinant UX, logique métier et
+								automatisations pour répondre à un enjeu global.
+							</p>
+							<ul>
+								<li>Refonte de pages clés</li>
+								<li>Suites d’outils cohérentes</li>
+								<li>Extensions dédiées CSOD</li>
+							</ul>
+							<a href="#contact" class="offer-link">
+								Besoin d’un projet
+								<i data-lucide="arrow-right"></i>
+							</a>
+						</div>
+					</div>
+
+					<!-- Support continu -->
+					<div class="col-md-6 col-lg-3">
+						<div class="offer-card h-100">
+							<span class="offer-tag">Niveau 4</span>
+							<h3>Support continu</h3>
+							<p>
+								Un accompagnement récurrent pour faire évoluer votre
+								environnement CSOD, au rythme de vos besoins.
+							</p>
+							<ul>
+								<li>Crédits mensuels d’évolution</li>
+								<li>Ajustements et optimisations</li>
+								<li>Support expert dédié</li>
+							</ul>
+							<a href="#contact" class="offer-link">
+								Besoin d’un accompagnement
+								<i data-lucide="arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Exemples de solutions -->
+		<section class="section" id="cases">
+			<div class="container" data-aos="fade-up">
+				<h2 class="section-title text-center">Nos réalisations</h2>
+				<p class="section-subtitle text-center">
+					Quelques exemples concrets de ce que nous avons mis en place pour nos
+					clients sur leur plateforme Cornerstone OnDemand. Contactez-nous pour
+					une démonstration ciblée autour de vos besoins.
+				</p>
+
+				<div class="row g-4 cases-grid">
+					<div class="col-md-4">
+						<div class="case-card h-100">
+							<img
+								src="https://placehold.co/600x380"
+								alt="Illustration d’un onboarding contextuel sur CSOD"
+								class="img-fluid"
+							/>
+							<h3>Onboarding contextuel</h3>
+							<div class="case-meta">
+								Quick Win · Adoption des nouveaux parcours
+							</div>
+							<p>
+								Mise en place de popups d’onboarding et d’aides contextuelles
+								pour guider les utilisateurs lors de la découverte d’un nouveau
+								process CSOD.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="case-card h-100">
+							<img
+								src="https://placehold.co/600x380"
+								alt="Visualisation d’un module de gestion de conflits de planning"
+								class="img-fluid"
+							/>
+							<h3>Détection de conflits d’agenda</h3>
+							<div class="case-meta">Module sur mesure · Managers</div>
+							<p>
+								Module de vérification automatique des conflits lors
+								d’assignations massives de formations, avec alertes et
+								recommandations pour les managers.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="case-card h-100">
+							<img
+								src="https://placehold.co/600x380"
+								alt="Vue managers personnalisée avec actions rapides"
+								class="img-fluid"
+							/>
+							<h3>Vue managers simplifiée</h3>
+							<div class="case-meta">
+								Projet complet · Expérience utilisateur
+							</div>
+							<p>
+								Création d’une page custom combinant indicateurs clés, actions
+								rapides et raccourcis vers les fonctionnalités CSOD utiles au
+								quotidien pour les managers.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Pourquoi travailler ensemble -->
+		<section class="section section-soft">
+			<div class="container" data-aos="fade-up">
+				<h2 class="section-title text-center">
+					Pourquoi travailler ensemble ?
+				</h2>
+				<p class="section-subtitle text-center">
+					Une approche pragmatique, centrée sur l’impact réel pour vos équipes,
+					vos managers et vos workflows.
+				</p>
+
+				<div class="row g-4 justify-content-center">
+					<div class="col-md-6 col-lg-4">
+						<div class="benefit-card h-100">
+							<div class="benefit-icon">
+								<i data-lucide="zap"></i>
+							</div>
+							<h3>Rapidité</h3>
+							<p>
+								Des solutions conçues et livrées dans des délais courts, avec un
+								focus sur les points qui font vraiment la différence pour vos
+								utilisateurs.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="benefit-card h-100">
+							<div class="benefit-icon">
+								<i data-lucide="target"></i>
+							</div>
+							<h3>Précision</h3>
+							<p>
+								Une compréhension fine de vos workflows CSOD pour des réponses
+								ciblées, alignées sur vos contraintes et vos priorités internes.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="benefit-card h-100">
+							<div class="benefit-icon">
+								<i data-lucide="puzzle"></i>
+							</div>
+							<h3>Intégration fluide</h3>
+							<p>
+								Des solutions qui se fondent dans votre environnement CSOD, sans
+								casser les usages existants ni rajouter de la lourdeur.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="benefit-card h-100">
+							<div class="benefit-icon">
+								<i data-lucide="activity"></i>
+							</div>
+							<h3>Impact mesurable</h3>
+							<p>
+								Priorité donnée aux gains concrets : temps gagné, meilleure
+								lisibilité, réduction des frictions, meilleure adoption.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="benefit-card h-100">
+							<div class="benefit-icon">
+								<i data-lucide="layers"></i>
+							</div>
+							<h3>Adaptation</h3>
+							<p>
+								Des solutions ajustées à vos équipes, à votre organisation et à
+								vos standards de sécurité et de gouvernance.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- À propos -->
+		<section class="section" id="about">
+			<div class="container" data-aos="fade-up">
+				<div class="row g-4 align-items-center">
+					<div class="col-md-4">
+						<img
+							src="https://placehold.co/600x600"
+							alt="Portrait du consultant CSOD"
+							class="img-fluid rounded-4"
+						/>
+					</div>
+					<div class="col-md-8">
+						<div class="about-card">
+							<h2>À propos</h2>
+							<p>
+								Fort d’une expertise combinée sur les derniers standards en
+								développement web ainsi que sur les capacités techniques de la
+								plateforme Cornerstone OnDemand, nous accompagnons les
+								entreprises en créant des solutions sur mesure — customisations,
+								automatisations, extensions — pour répondre à des besoins
+								concrets avec rapidité et précision.
+							</p>
+							<p>
+								Chaque intervention suit une démarche pragmatique : analyse
+								claire du problème, conception d’une réponse ciblée, puis
+								intégration fluide dans l’environnement CSOD existant.
+								L’objectif est simple : renforcer l’expérience utilisateur,
+								simplifier les processus internes et délivrer des résultats
+								tangibles en un temps court, sans superflu.
+							</p>
+							<a href="#contact" class="offer-link">
+								Me contacter
+								<i data-lucide="arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact / CTA -->
+		<section class="section-cta" id="contact">
+			<div class="container contact-cta" data-aos="fade-up">
+				<h2 class="section-title text-white">
+					Vous avez un besoin CSOD précis ?
+				</h2>
+				<p>
+					Un besoin, une solution, un impact immédiat. Décrivez votre contexte,
+					et voyons comment avancer rapidement.
+				</p>
+				<a href="mailto:contact@enylo.tech" class="btn btn-light">
+					Écrire un email
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div
+			class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+		>
+			<span>
+				© <span id="year"></span> ENYLO.tech — Solutions technologiques autour
+				de Cornerstone OnDemand.
+			</span>
+			<span>
+				Site en cours d’évolution.
+				<a href="#contact">Me contacter</a>
+			</span>
+		</div>
+	</footer>
+</body>
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		if (window.AOS) AOS.init({ duration: 600, once: true });
+
+		if (window.lucide) {
+			lucide.createIcons();
+		}
+
+		var yearSpan = document.getElementById("year");
+		if (yearSpan) {
+			yearSpan.textContent = new Date().getFullYear();
+		}
+	});
+</script>
